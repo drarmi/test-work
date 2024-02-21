@@ -21,7 +21,7 @@ class Sidebars {
 
 		register_sidebar(
 			[
-				'name'          => esc_html__( 'Sidebar', 'aquila' ),
+				'name'          => esc_html__( 'Sidebar', 'property-core' ),
 				'id'            => 'sidebar-1',
 				'description'   => '',
 				'before_widget' => '<div id="%1$s" class="widget widget-sidebar %2$s">',

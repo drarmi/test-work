@@ -7,14 +7,12 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<section class="col-lg-8 col-md-8 col-sm-12">
-					<div class="row">
+					<div class="row single-content-wrapper">
 						<?php
 						if (have_posts()) :
 							while (have_posts()) : the_post();
 								$post_id = get_the_ID();
-								get_template_part('template-parts/objects/objects', get_post_format(), array(
-									'post_id' => $post_id,
-								));
+								echo do_shortcode("[single_card_shortcode id=$post_id]");
 							endwhile;
 						endif;
 						?>

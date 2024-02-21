@@ -7,17 +7,14 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<section class="col-lg-8 col-md-8 col-sm-12">
-					<div class="row">
+					<div class="row content-wrapper">
 						<?php
 						global $wp_query;
 
 						if ($wp_query->have_posts()) :
 							while ($wp_query->have_posts()) : $wp_query->the_post();
 								$post_id = get_the_ID();
-								
-								get_template_part('template-parts/archive/card', get_post_format(), array(
-									'post_id' => $post_id,
-								));
+								echo do_shortcode("[archive_card_shortcode id=$post_id]");
 							endwhile;
 						endif;
 						?>
@@ -30,6 +27,9 @@ get_header();
 						</aside>
 					<?php } ?>
 				</section>
+			</div>
+			<div class="row control-arcive">
+				<?php custom_pagination(); ?>
 			</div>
 
 		</div>
