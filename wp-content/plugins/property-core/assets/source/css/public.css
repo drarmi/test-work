@@ -1,0 +1,15 @@
+:root {
+	--PS-COLUMN: 4;
+	--LEPTOP-COLUMN: 3;
+	--MOBILE-COLUMN: 2;
+}
+
+
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 768px) {
+
+}

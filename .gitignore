@@ -1,0 +1,6 @@
+/wp-admin/
+/wp-includes/
+/wp-content/plugins/elementor
+/*.php
+/*.txt
+/*.html
